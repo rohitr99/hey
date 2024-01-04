@@ -1,0 +1,17 @@
+﻿@using BLL;
+@using BOL;
+@using System.Collections.Generic;
+@{
+    ViewData["Title"] = "drinks";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@{
+    List<softdrink>ord=(List<softdrink>)this.ViewData["Drink"];
+        foreach(softdrink e in ord){
+            <p>@e.ID @e.NAME @e.RATE</p>
+        }
+}
